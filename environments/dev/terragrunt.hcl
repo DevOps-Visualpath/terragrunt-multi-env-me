@@ -11,15 +11,16 @@ locals {
 }
 
 inputs = {
-  environment        = "Developement"
+environment        = "Developement"
+s3_bucket_name     = "my-testing-s3bucket-terragrunt"
+ region_name         = "us-east-1"
+ public_az           = ["us-east-1a", "us-east-1b"]
+ private_az          = ["us-east-1a", "us-east-1b"]
  # eks_cluster_name  = "Dev-EKS-Demo"
  # node_group_name   = "webapp-dev-01"
  # node_role_name    = "NodeRole-dev"
  # nodegroup_keypair = "webapp-dev-01-key"
  # cluster_role      = "AWSEKSClusterRole-dev"
- region_name         = "us-east-1"
- public_az           = ["us-east-1a", "us-east-1b"]
- private_az          = ["us-east-1a", "us-east-1b"]
  # vpc_cidr_block    = "10.10.0.0/16"
  # public_subnets = {
  #   "${local.region}a" = "10.10.0.0/24"
